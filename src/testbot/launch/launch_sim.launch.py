@@ -88,7 +88,7 @@ def generate_launch_description():
             name='teleop_node',
             parameters=[{'use_sim_time': True}],
             remappings=[('/cmd_vel','/cmd_vel_keyb')],
-            prefix='xterm -e'
+            prefix='xterm -e',
     )
 
 
@@ -121,8 +121,9 @@ def generate_launch_description():
         bridge,
         rsp,
         gazebo,
+        # teleop_node,
         spawn_entity,
-        teleop_node,
+        
         # # control_node,
         # RegisterEventHandler(
         #     event_handler=OnProcessExit(
